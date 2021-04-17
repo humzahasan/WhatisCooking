@@ -6,10 +6,9 @@ export default function App() {
   const foodMenu = {
     dessert: { cheesecake: "4/5", "ice cream": "5/5" },
     drinks: { "virgin mojito": "4/5", "KFC Krusher": "5/5" },
-    fastfood: { burger: "4/5", "French Fries": "5" }
+    fastfood: { burger: "4/5", "French Fries": "5/5" }
   };
   const cuisines = Object.keys(foodMenu);
-  //console.log(cuisines);
 
   const getSubMenu = (list) => {
     setSubItem(foodMenu[list]);
@@ -18,6 +17,9 @@ export default function App() {
   //console.log(subitem);
   return (
     <div className="App">
+      <h1>👩‍🍳👨‍🍳What's Cooking ?</h1>
+      <hr />
+      <br />
       {cuisines.map((cuisine) => (
         <span key={cuisine} onClick={() => getSubMenu(cuisine)}>
           {cuisine}{" "}
